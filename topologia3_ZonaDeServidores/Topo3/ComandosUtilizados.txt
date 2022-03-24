@@ -1,0 +1,98 @@
+Comandos Utilizados------------------------
+
+#Ver estados
+do sh vlan-sw #VLANS
+do sh int tr  #PUERTOS
+do sh vtp st  #VTP
+
+IPS DE LAS VPC
+#Server_RRHH
+ip 192.168.81.10 255.255.255.0 192.168.81.1
+#Server_Informatica
+ip 192.168.82.80 255.255.255.0 192.168.82.1
+#Server_Conta
+ip 192.168.83.10 255.255.255.0 192.168.83.1
+#Server_Ventas
+ip 192.168.84.10 255.255.255.0 192.168.84.1
+
+#ROUTER EWS1-------------------------------------
+#INTERFAZ F1/0
+int f1/0
+switchport mode access
+switchport access vlan 20
+#INTERFAZ F1/1
+int f1/1
+switchport mode trunk
+switchport trunk allowed vlan 1,10,20,30,40,1002-1005
+#INTERFAZ F1/2
+int f1/2
+switchport mode trunk
+switchport trunk allowed vlan 1,10,20,30,40,1002-1005
+#RELIZAR VTP
+vtp domain GRUPO8
+vtp pass grupo8
+vtp version 2
+vtp mode transparent
+
+
+#ROUTER EWS2-------------------------------------
+#INTERFAZ F1/0
+int f1/0
+switchport mode access
+switchport access vlan 10
+#INTERFAZ F1/2
+int f1/2
+switchport mode trunk
+switchport trunk allowed vlan 1,10,20,30,40,1002-1005
+#INTERFAZ F1/3
+int f1/3
+switchport mode trunk
+switchport trunk allowed vlan 1,10,20,30,40,1002-1005
+#RELIZAR VTP
+vtp domain GRUPO8
+vtp pass grupo8
+vtp version 2
+vtp mode client
+
+#ROUTER EWS3-------------------------------------
+#INTERFAZ F1/0
+int f1/0
+switchport mode access
+switchport access vlan 30
+#INTERFAZ F1/1
+int f1/1
+switchport mode trunk
+switchport trunk allowed vlan 1,10,20,30,40,1002-1005
+#INTERFAZ F1/3
+int f1/3
+switchport mode trunk
+switchport trunk allowed vlan 1,10,20,30,40,1002-1005
+#INTERFAZ F1/4
+int f1/4
+switchport mode trunk
+switchport trunk allowed vlan 1,10,20,30,40,1002-1005
+#RELIZAR VTP
+vtp domain GRUPO8
+vtp pass grupo8
+vtp version 2
+vtp mode client
+
+
+#ROUTER EWS4-------------------------------------
+#INTERFAZ F1/0
+int f1/0
+switchport mode access
+switchport access vlan 40
+#INTERFAZ F1/4
+int f1/4
+switchport mode trunk
+switchport trunk allowed vlan 1,10,20,30,40,1002-1005
+#INTERFAZ F1/1
+int f1/1
+switchport mode trunk
+switchport trunk allowed vlan 1,10,20,30,40,1002-1005
+#RELIZAR VTP
+vtp domain GRUPO8
+vtp pass grupo8
+vtp version 2
+vtp mode client

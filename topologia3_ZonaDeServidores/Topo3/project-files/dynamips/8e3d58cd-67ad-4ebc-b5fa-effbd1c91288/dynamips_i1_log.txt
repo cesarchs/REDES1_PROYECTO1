@@ -1,0 +1,54 @@
+Mar 22 20:44:00.062 HYPERVISOR: Release 0.2.17-x86/Windows (tag 2017072410)
+Mar 22 20:44:00.064 HYPERVISOR: Started on IP = localhost, TCP port = 59419.
+Mar 22 20:44:00.383 HYPERVISOR: exec_cmd: hypervisor version 
+Mar 22 20:44:00.384 HYPERVISOR: exec_cmd: hypervisor working_dir C:\Users\Leonardo Martínez\GNS3\projects\Topo3\project-files\dynamips 
+Mar 22 20:44:00.576 GENERAL: working_dir=C:\Users\Leonardo Martínez\GNS3\projects\Topo3\project-files\dynamips
+Mar 22 20:44:00.577 HYPERVISOR: exec_cmd: hypervisor working_dir C:\Users\Leonardo Martínez\GNS3\projects\Topo3\project-files\dynamips\8e3d58cd-67ad-4ebc-b5fa-effbd1c91288 
+Mar 22 20:44:00.578 GENERAL: working_dir=C:\Users\Leonardo Martínez\GNS3\projects\Topo3\project-files\dynamips\8e3d58cd-67ad-4ebc-b5fa-effbd1c91288
+Mar 22 20:44:00.578 HYPERVISOR: exec_cmd: vm create ESW1 1 c3600 
+Mar 22 20:44:00.583 VM: VM ESW1 created.
+Mar 22 20:44:00.585 HYPERVISOR: exec_cmd: vm set_con_tcp_port ESW1 5000 
+Mar 22 20:44:00.585 HYPERVISOR: exec_cmd: c3600 get_mac_addr ESW1 
+Mar 22 20:44:00.587 HYPERVISOR: exec_cmd: vm set_ios ESW1 C:/Users/Leonardo Martínez/Desktop/redes/c3725-adventerprisek9-mz124-15.image 
+Mar 22 20:44:00.588 HYPERVISOR: exec_cmd: vm set_exec_area ESW1 64 
+Mar 22 20:44:00.590 HYPERVISOR: exec_cmd: vm set_ram ESW1 192 
+Mar 22 20:44:00.591 HYPERVISOR: exec_cmd: vm set_nvram ESW1 256 
+Mar 22 20:44:00.592 HYPERVISOR: exec_cmd: vm set_disk0 ESW1 1 
+Mar 22 20:44:00.593 HYPERVISOR: exec_cmd: vm get_status ESW1 
+Mar 22 20:44:00.594 HYPERVISOR: exec_cmd: vm slot_add_binding ESW1 0 0 NM-16ESW 
+Mar 22 20:44:00.595 HYPERVISOR: exec_cmd: vm get_status ESW1 
+Mar 22 20:44:00.596 HYPERVISOR: exec_cmd: vm slot_add_binding ESW1 1 0 NM-16ESW 
+Mar 22 20:44:00.597 HYPERVISOR: exec_cmd: vm get_status ESW1 
+Mar 22 20:44:00.597 HYPERVISOR: exec_cmd: vm slot_add_binding ESW1 2 0 NM-16ESW 
+Mar 22 20:44:00.598 HYPERVISOR: exec_cmd: vm get_status ESW1 
+Mar 22 20:44:00.599 HYPERVISOR: exec_cmd: vm slot_add_binding ESW1 3 0 NM-16ESW 
+Mar 22 20:44:07.002 HYPERVISOR: exec_cmd: vm create Ghost 0 c3600 
+Mar 22 20:44:07.006 VM: VM Ghost created.
+Mar 22 20:44:07.008 HYPERVISOR: exec_cmd: vm set_ios Ghost C:/Users/Leonardo Martínez/Desktop/redes/c3725-adventerprisek9-mz124-15.image 
+Mar 22 20:44:07.009 HYPERVISOR: exec_cmd: vm set_ghost_status Ghost 1 
+Mar 22 20:44:07.011 HYPERVISOR: exec_cmd: vm set_ghost_file Ghost C:\Users\Leonardo Martínez\GNS3\projects\Topo3\project-files\dynamips\c3725-adventerprisek9-mz124-15.image-192.ghost 
+Mar 22 20:44:07.012 HYPERVISOR: exec_cmd: vm set_ram Ghost 192 
+Mar 22 20:44:07.013 HYPERVISOR: exec_cmd: vm get_status Ghost 
+Mar 22 20:44:07.016 HYPERVISOR: exec_cmd: vm set_config Ghost configs\i0_startup-config.cfg 
+Mar 22 20:44:07.017 HYPERVISOR: exec_cmd: vm start Ghost 
+Mar 22 20:44:07.776 HYPERVISOR: exec_cmd: vm get_status Ghost 
+Mar 22 20:44:07.780 HYPERVISOR: exec_cmd: vm stop Ghost 
+Mar 22 20:44:07.928 VM: VM Ghost shutdown.
+Mar 22 20:44:07.931 HYPERVISOR: exec_cmd: vm extract_config Ghost 
+Mar 22 20:44:07.935 HYPERVISOR: exec_cmd: vm clean_delete Ghost 
+Mar 22 20:44:07.935 VM: VM Ghost destroyed.
+Mar 22 20:44:07.970 HYPERVISOR: exec_cmd: vm set_ghost_status ESW1 2 
+Mar 22 20:44:07.972 HYPERVISOR: exec_cmd: vm set_ghost_file ESW1 C:\Users\Leonardo Martínez\GNS3\projects\Topo3\project-files\dynamips\c3725-adventerprisek9-mz124-15.image-192.ghost 
+Mar 22 20:44:07.974 HYPERVISOR: exec_cmd: vm get_status ESW1 
+Mar 22 20:44:07.975 HYPERVISOR: exec_cmd: vm set_config ESW1 configs\i1_startup-config.cfg 
+Mar 22 20:44:07.976 HYPERVISOR: exec_cmd: vm start ESW1 
+Mar 22 20:44:38.440 HYPERVISOR: exec_cmd: vm extract_config ESW1 
+Mar 22 20:46:58.399 HYPERVISOR: exec_cmd: vm get_status ESW1 
+Mar 22 20:46:58.400 HYPERVISOR: exec_cmd: vm stop ESW1 
+Mar 22 20:47:08.419 HYPERVISOR: exec_cmd: vm extract_config ESW1 
+Mar 22 20:47:08.539 HYPERVISOR: exec_cmd: vm get_status ESW1 
+Mar 22 20:47:08.540 HYPERVISOR: exec_cmd: vm stop ESW1 
+Mar 22 20:47:18.579 HYPERVISOR: exec_cmd: vm extract_config ESW1 
+Mar 22 20:47:18.591 HYPERVISOR: exec_cmd: vm delete ESW1 
+Mar 22 20:47:28.612 HYPERVISOR: exec_cmd: hypervisor stop 
+Mar 22 20:47:28.877 HYPERVISOR: Stopped.
