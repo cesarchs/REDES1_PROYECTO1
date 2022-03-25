@@ -1,0 +1,50 @@
+CONFIGURACION VTP
+ vtp domain GRUPO8
+ vtp password grupo8
+ vtp mode client
+
+CONFIGURACION ETHERSWITCH
+ - MODE ACCESS ENTRE SWITCH A VPCS
+	switchport mode access
+	- VLAN RRHH
+	  switchport access vlan 10
+	- VLAN INFORMATICA
+	  switchport access vlan 20
+	- VLAN CONTABILIDAD
+	  switchport access vlan 30
+	- VLAN VENTAS
+	  switchport access vlan 40
+
+ - MODE TRUNK SWITCH A SWITCH
+	switchport mode trunk
+	switchport trunk allowed vlan 1,10,20,30,40,1002-1005
+
+CONFIGURACION VPCS
+ - RRHH
+   ip 192.168.81.X0/24 192.168.81.1
+   - RRHH_1
+     ip 192.168.81.10/24 192.168.81.1
+   - RRHH_2
+     ip 192.168.81.20/24 192.168.81.1
+
+ - INFORMATICA
+   ip 192.168.82.X0/24 192.168.82.1
+   - INFORMATICA_1
+     ip 192.168.82.10/24 192.168.82.1
+ - CONTABILIDAD
+   ip 192.168.83.X0/24 192.168.83.1
+   - CONTA_1
+     ip 192.168.83.10/24 192.168.83.1
+   - CONTA_2
+     ip 192.168.83.20/24 192.168.83.1
+
+ - VENTAS
+   ip 192.168.84.X0/24 192.168.84.1
+   - VENTAS_1
+     ip 192.168.84.10/24 192.168.84.1
+
+CONFIGURACION CLOUD
+ LOCAL PORT: 4001
+ REMOTE HOST: 10.8.0.2
+ REMOTE PORT: 4002
+----------------------------------------------------------------
