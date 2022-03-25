@@ -2,7 +2,7 @@
 
 # Grupo #8 | Proyecto 1
 
-### Universidad de San Carlos de Guatemala, Agosto 2021
+### Universidad de San Carlos de Guatemala, 25 Marzo 2022
 ### Facultad de Ingeniería
 ### Escuela de Ciencias y Sistemas
 ### Redes de Computadoras 1
