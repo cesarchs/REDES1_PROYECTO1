@@ -152,7 +152,7 @@ CONFIGURACION VPCS
 
    ip 192.168.84.X0/24 192.168.84.1
    - VENTAS_1
-   
+
      ip 192.168.84.10/24 192.168.84.1
 
 ## VPCs
@@ -177,19 +177,28 @@ CONFIGURACION VPCS
 ### comandos utilizados en los switches
 
 CONFIGURACION ETHERSWITCH
+
  * MODE ACCESS ENTRE SWITCH A VPCS
+
 	switchport mode access
+
 	- VLAN RRHH
+
 	  switchport access vlan 10
 	- VLAN INFORMATICA
+
 	  switchport access vlan 20
 	- VLAN CONTABILIDAD
+
 	  switchport access vlan 30
 	- VLAN VENTAS
+
 	  switchport access vlan 40
 
  * MODE TRUNK SWITCH A SWITCH
+
 	switchport mode trunk
+
 	switchport trunk allowed vlan 1,10,20,30,40,1002-1005
 ### switches
 
@@ -200,16 +209,18 @@ CONFIGURACION ETHERSWITCH
 ><img src='https://github.com/cesarchs/REDES1_PROYECTO1/blob/main/IMG/TOPOLOGIA%201/esw3_topo1.PNG' width='100%' >
 
 * CONFIGURACION VTP
+
  vtp domain GRUPO8
  vtp password grupo8
  vtp mode client
 
  * CONFIGURACION CLOUD
+
  LOCAL PORT: 4001
  REMOTE HOST: 10.8.0.2
  REMOTE PORT: 4002
 
-
+--- 
 ### TOPOLOGIA 2: Backbone
 La zona de cableado vertical será la encargada de conectar el área de trabajo con la zona
 de servidores, para esto se tiene nodos altamente redundantes cuya finalidad es brindar
@@ -239,8 +250,50 @@ una conectividad el 100% del tiempo
 ---
 A continuacion puede observarse las configuraciones necesarias en cada uno de los dispositivos y switchs para la toplogia 2:
 
+### Comandos vpcs
+
+* Configurar VPCS
+
+ - ip 192.168.82.20/24 192.168.82.1
+
+
 ### VPC
 > <img src='https://github.com/cesarchs/REDES1_PROYECTO1/blob/main/IMG/TOPOLOGIA%202/ip%20de%20informatica_2.JPG' width='100%'>
+
+### comandos switches
+
+* configurar Router
+
+* configure terminal
+ - vlan 20
+* name informatica
+--- 
+- interface f1/0
+- switchport mode access
+- switchport access vlan 20
+
+---
+
+- interface f1/2
+- switchport mode trunk
+- switchport trunk allowed vlan 1,10,20,1002-1005
+
+- interface f1/1
+- switchport mode trunk
+- switchport trunk allowed vlan 1,10,20,1002-1005
+
+- interface f1/0
+- switchport mode trunk
+- switchport trunk allowed vlan 1,10,20,1002-1005
+
+--- 
+* Configurar vtp
+
+vtp domain GRUPO8
+vtp password grupo8
+vtp mode server || client
+vtp version 2
+vtp pruning
 
 ### Switches
 > <img src='https://github.com/cesarchs/REDES1_PROYECTO1/blob/main/IMG/TOPOLOGIA%202/switch%20cliente%20VLAN%20y%20TRUNK.JPG' width='100%'>
@@ -248,6 +301,7 @@ A continuacion puede observarse las configuraciones necesarias en cada uno de lo
 > <img src='https://github.com/cesarchs/REDES1_PROYECTO1/blob/main/IMG/TOPOLOGIA%202/switch%20server%20VTP.JPG' width='100%'>
 
 
+--- 
 ### TOPOLOGIA 3: Zona de Servidores
 Lugar donde se almacenan los servidores web de la empresa. Se requiere que los mismos estén siempre activos, debido a esto la topología se vuelve extremadamente pesada. Por lo que se usará un nodo maestro-esclavo para equilibrar la carga del mismo.
 
@@ -274,11 +328,143 @@ Lugar donde se almacenan los servidores web de la empresa. Se requiere que los m
 ---
 A continuacion puede observarse las configuraciones necesarias en cada uno de los dispositivos y switchs para la toplogia 3:
 
+### Comandos utilisados VPCs
+
+* IPS DE LAS VPC
+
+- Server_RRHH
+
+ip 192.168.81.10 255.255.255.0 192.168.81.1
+- Server_Informatica
+
+ip 192.168.82.80 255.255.255.0 192.168.82.1
+- Server_Conta
+
+ip 192.168.83.10 255.255.255.0 192.168.83.1
+- Server_Ventas
+
+ip 192.168.84.10 255.255.255.0 192.168.84.1
+
 ### VPC (ping)
+
 > <img src='https://github.com/cesarchs/REDES1_PROYECTO1/blob/main/IMG/TOPOLOGIA%203/vpc_topo3.jpeg' width='100%'>
-> <img src='' width='100%'>
-> <img src='' width='100%'>
-> <img src='' width='100%'>
+
+### Comandos utilizados en los switches
+
+### ROUTER EWS1
+
+* INTERFAZ F1/0
+
+int f1/0
+switchport mode access
+switchport access vlan 20
+* INTERFAZ F1/1
+
+int f1/1
+switchport mode trunk
+switchport trunk allowed vlan 1,10,20,30,40,1002-1005
+
+* INTERFAZ F1/2
+
+int f1/2
+switchport mode trunk
+switchport trunk allowed vlan 1,10,20,30,40,1002-1005
+
+* RELIZAR VTP
+
+vtp domain GRUPO8
+vtp pass grupo8
+vtp version 2
+vtp mode transparent
+
+
+### ROUTER EWS2
+
+* INTERFAZ F1/0
+
+int f1/0
+switchport mode access
+switchport access vlan 10
+
+* INTERFAZ F1/2
+
+int f1/2
+switchport mode trunk
+switchport trunk allowed vlan 1,10,20,30,40,1002-1005
+
+* INTERFAZ F1/3
+
+int f1/3
+switchport mode trunk
+switchport trunk allowed vlan 1,10,20,30,40,1002-1005
+
+* RELIZAR VTP
+
+vtp domain GRUPO8
+vtp pass grupo8
+vtp version 2
+vtp mode client
+
+### ROUTER EWS3
+
+* INTERFAZ F1/0
+
+int f1/0
+switchport mode access
+switchport access vlan 30
+
+* INTERFAZ F1/1
+
+int f1/1
+switchport mode trunk
+switchport trunk allowed vlan 1,10,20,30,40,1002-1005
+
+* INTERFAZ F1/3
+
+int f1/3
+switchport mode trunk
+switchport trunk allowed vlan 1,10,20,30,40,1002-1005
+
+* INTERFAZ F1/4
+
+int f1/4
+switchport mode trunk
+switchport trunk allowed vlan 1,10,20,30,40,1002-1005
+
+* RELIZAR VTP
+
+vtp domain GRUPO8
+vtp pass grupo8
+vtp version 2
+vtp mode client
+
+
+### ROUTER EWS4
+
+* INTERFAZ F1/0
+
+int f1/0
+switchport mode access
+switchport access vlan 40
+
+* INTERFAZ F1/4
+
+int f1/4
+switchport mode trunk
+switchport trunk allowed vlan 1,10,20,30,40,1002-1005
+
+* INTERFAZ F1/1
+
+int f1/1
+switchport mode trunk
+switchport trunk allowed vlan 1,10,20,30,40,1002-1005
+
+* RELIZAR VTP
+
+vtp domain GRUPO8
+vtp pass grupo8
+vtp version 2
+vtp mode client
 
 ### Switches
 > <img src='https://github.com/cesarchs/REDES1_PROYECTO1/blob/main/IMG/TOPOLOGIA%203/pantallaCompleta_topo3_sw1.jpeg' width='100%'>
