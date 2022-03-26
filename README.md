@@ -64,7 +64,7 @@ Para usar hacer uso de este proyecto primero deberá cumplir con los siguientes 
 ` Se deben hacer las configuraciones pertinentes para correr la simulación con todos los dispositivos necesarios, por ello primero se debe agregar la imagen virtual de una dispositivo Switch de capa 3.`
 
 #### Sistema operativo: 
-`Para el caso se usa el sistema operativo Windows 10.`
+`Sistema operativo Windows 10.`
 ### Instalacion Imagen de Switch:
 *Primero deberá obtener un archivo de imagen para GNS3 de un Switch de capa 3 previamente descargada en alguna carpeta de preferencia pues será de utilidad posteriormente.*
 
@@ -99,21 +99,9 @@ fase. Tome en cuenta que esto es equivalente a 255.255.255.0.
 Esta zona, corresponde a la sección de cableado horizontal y área de trabajo, donde los
 Los usuarios finales tendrán acceso a los puntos de red y conectar un dispositivo final. La
 topografía y características correspondientes de la red es la siguiente:
-> <img src='images/topologia1.png' width='100%'>
+> <img src='https://github.com/cesarchs/REDES1_PROYECTO1/blob/main/IMG/TOPOLOGIA%201/topologia_1.png' width='100%'>
 
 ### Configuracion topologia 1
-
-Agregar las maquinas de la siguiente forma:
-
-| NO. | Nombre        | Virtualizada |
-|-----|---------------|--------------|
-| 1   | RRHH_1        | SI           |
-| 2   | RRHH_2        | NO           |
-| 3   | Conta_1       | NO           |
-| 4   | Conta_2       | SI           |
-| 5   | Ventas_1      | NO           |
-| 6   | Informatica_1 | NO           |
-
 Se debe configurar los puertos de los switch en modo access o modo troncal, según corresponda. 
 * Configurar VTP con los siguientes datos:
   * Dominio: Grupo# (# - será el número de grupo asignado)
