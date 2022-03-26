@@ -182,21 +182,16 @@ A continuacion puede observarse las configuraciones necesarias en cada uno de lo
 
 
 ### TOPOLOGIA 3: Zona de Servidores
-Lugar donde se almacenan los servidores web de la empresa. Se requiere que los mismos
-estén siempre activos, debido a esto la topología se vuelve extremadamente pesada. Por lo que se usará un nodo maestro-esclavo para equilibrar la carga del mismo.
-> <img src='images/toplogia3.png' width='85%'>
+Lugar donde se almacenan los servidores web de la empresa. Se requiere que los mismos estén siempre activos, debido a esto la topología se vuelve extremadamente pesada. Por lo que se usará un nodo maestro-esclavo para equilibrar la carga del mismo.
 
-#### Maestro
-Con una interfaz gráfica, es quien controla la topología y gestiona los recursos. Es la
-huesped de las vpc.
-
-#### Esclavo
-Un equipo que servirá como host para sobrellevar la carga del maestro.
+<img src='https://github.com/cesarchs/REDES1_PROYECTO1/blob/main/IMG/TOPOLOGIA%203/topologia3.JPG' width='100%'>
 
 ### Configuracion topologia 3
 
 * En este apartado, los servidores web son simples VPC’S, no se debe configurar nada en ellos más que su dirección ip. Se comprobará el acceso a ellos por medio de un PING.
+
 * Configurar los puertos de los switch en modo access o modo troncal, según corresponda.
+
 * Configurar VTP con los siguientes datos:
   * Dominio: Grupo# (# - será el número de grupo asignado).
   * Contraseña: Grupo# (#-será el número de grupo asignado).
@@ -206,9 +201,36 @@ Un equipo que servirá como host para sobrellevar la carga del maestro.
       * ESW8
       * ESW9
       * ESW10
-      * ESW11
-    * Server:
-      * 1. (-)
     * Transparent:
-      * 1. (-)
+      * 1.  ESW11
 
+---
+A continuacion puede observarse las configuraciones necesarias en cada uno de los dispositivos y switchs para la toplogia 3:
+
+### VPC (ping)
+> <img src='https://github.com/cesarchs/REDES1_PROYECTO1/blob/main/IMG/TOPOLOGIA%203/vpc_topo3.jpeg' width='100%'>
+> <img src='' width='100%'>
+> <img src='' width='100%'>
+> <img src='' width='100%'>
+
+### Switches
+> <img src='https://github.com/cesarchs/REDES1_PROYECTO1/blob/main/IMG/TOPOLOGIA%203/pantallaCompleta_topo3_sw1.jpeg' width='100%'>
+
+> <img src='https://github.com/cesarchs/REDES1_PROYECTO1/blob/main/IMG/TOPOLOGIA%203/sh_topo3_sw1.jpeg' width='100%'>
+
+> <img src='https://github.com/cesarchs/REDES1_PROYECTO1/blob/main/IMG/TOPOLOGIA%203/PantallaCompleta_topo3_sw2.jpeg' width='100%'>
+
+> <img src='https://github.com/cesarchs/REDES1_PROYECTO1/blob/main/IMG/TOPOLOGIA%203/sh_topo3_sw2.jpeg' width='100%'>
+
+> <img src='https://github.com/cesarchs/REDES1_PROYECTO1/blob/main/IMG/TOPOLOGIA%203/PantallaCompleta_topo3_sw3.jpeg' width='100%'>
+
+> <img src='https://github.com/cesarchs/REDES1_PROYECTO1/blob/main/IMG/TOPOLOGIA%203/sh_topo3_sw3.jpeg' width='100%'>
+
+> <img src='https://github.com/cesarchs/REDES1_PROYECTO1/blob/main/IMG/TOPOLOGIA%203/sh_topo3_sw4.jpeg' width='100%'>
+
+### nuve
+
+> <img src='https://github.com/cesarchs/REDES1_PROYECTO1/blob/main/IMG/TOPOLOGIA%203/nuve_topo3.jpeg' width='100%'>
+
+### VPN
+> <img src='https://github.com/cesarchs/REDES1_PROYECTO1/blob/main/IMG/TOPOLOGIA%203/vpn_topo3.jpeg' width='100%'>
