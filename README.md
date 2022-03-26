@@ -481,7 +481,7 @@ vtp mode client
 
 > <img src='https://github.com/cesarchs/REDES1_PROYECTO1/blob/main/IMG/TOPOLOGIA%203/sh_topo3_sw4.jpeg' width='100%'>
 
-### nuve
+### nube
 
 > <img src='https://github.com/cesarchs/REDES1_PROYECTO1/blob/main/IMG/TOPOLOGIA%203/nuve_topo3.jpeg' width='100%'>
 
