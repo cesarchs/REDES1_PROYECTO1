@@ -1,0 +1,45 @@
+Configurar VPCS
+
+#ip 192.168.82.20/24 192.168.82.1
+
+
+configurar Router
+
+#configure terminal
+#vlan 20
+#name informatica
+-----------------------------------
+#interface f1/0
+#switchport mode access
+#switchport access vlan 20
+
+---------------------------------
+
+#interface f1/2
+#switchport mode trunk
+#switchport trunk allowed vlan 1,10,20,1002-1005
+
+#interface f1/1
+#switchport mode trunk
+#switchport trunk allowed vlan 1,10,20,1002-1005
+
+#interface f1/0
+#switchport mode trunk
+#switchport trunk allowed vlan 1,10,20,1002-1005
+-----------------------------------
+Configurar vtp
+
+vtp domain GRUPO8
+vtp password grupo8
+vtp mode server || client
+vtp version 2
+vtp pruning
+
+----------------------------------
+configurar stp
+
+
+-------------------------
+write
+
+--------------------------------

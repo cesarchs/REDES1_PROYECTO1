@@ -118,6 +118,32 @@ Se debe configurar los puertos de los switch en modo access o modo troncal, seg√
 A continuacion puede observarse las configuraciones necesarias en cada uno de los dispositivos y switchs para la toplogia 1:
 
 ---
+### comandos utilizados en las vpcs
+
+CONFIGURACION VPCS
+ - RRHH
+   ip 192.168.81.X0/24 192.168.81.1
+   - RRHH_1
+     ip 192.168.81.10/24 192.168.81.1
+   - RRHH_2
+     ip 192.168.81.20/24 192.168.81.1
+
+ - INFORMATICA
+   ip 192.168.82.X0/24 192.168.82.1
+   - INFORMATICA_1
+     ip 192.168.82.10/24 192.168.82.1
+ - CONTABILIDAD
+   ip 192.168.83.X0/24 192.168.83.1
+   - CONTA_1
+     ip 192.168.83.10/24 192.168.83.1
+   - CONTA_2
+     ip 192.168.83.20/24 192.168.83.1
+
+ - VENTAS
+   ip 192.168.84.X0/24 192.168.84.1
+   - VENTAS_1
+     ip 192.168.84.10/24 192.168.84.1
+
 ## VPCs
 ### RRHH
 <img src='https://github.com/cesarchs/REDES1_PROYECTO1/blob/main/IMG/TOPOLOGIA%201/rrhh1_topo1.PNG' width='100%' >
@@ -135,12 +161,42 @@ A continuacion puede observarse las configuraciones necesarias en cada uno de lo
 ### ventas
 <img src='https://github.com/cesarchs/REDES1_PROYECTO1/blob/main/IMG/TOPOLOGIA%201/ventas1_topo1.PNG' width='100%' >
 
+
+---
+### comandos utilizados en los switches
+
+CONFIGURACION ETHERSWITCH
+ * MODE ACCESS ENTRE SWITCH A VPCS
+	switchport mode access
+	- VLAN RRHH
+	  switchport access vlan 10
+	- VLAN INFORMATICA
+	  switchport access vlan 20
+	- VLAN CONTABILIDAD
+	  switchport access vlan 30
+	- VLAN VENTAS
+	  switchport access vlan 40
+
+ * MODE TRUNK SWITCH A SWITCH
+	switchport mode trunk
+	switchport trunk allowed vlan 1,10,20,30,40,1002-1005
 ### switches
+
 > <img src='https://github.com/cesarchs/REDES1_PROYECTO1/blob/main/IMG/TOPOLOGIA%201/esw1_topo1.PNG' width='100%' >
 
 <img src='https://github.com/cesarchs/REDES1_PROYECTO1/blob/main/IMG/TOPOLOGIA%201/esw2_topo1.PNG' width='100%' >
 
-> <img src='https://github.com/cesarchs/REDES1_PROYECTO1/blob/main/IMG/TOPOLOGIA%201/esw3_topo1.PNG' width='100%' >
+><img src='https://github.com/cesarchs/REDES1_PROYECTO1/blob/main/IMG/TOPOLOGIA%201/esw3_topo1.PNG' width='100%' >
+
+* CONFIGURACION VTP
+ vtp domain GRUPO8
+ vtp password grupo8
+ vtp mode client
+
+ * CONFIGURACION CLOUD
+ LOCAL PORT: 4001
+ REMOTE HOST: 10.8.0.2
+ REMOTE PORT: 4002
 
 
 ### TOPOLOGIA 2: Backbone
@@ -233,4 +289,4 @@ A continuacion puede observarse las configuraciones necesarias en cada uno de lo
 > <img src='https://github.com/cesarchs/REDES1_PROYECTO1/blob/main/IMG/TOPOLOGIA%203/nuve_topo3.jpeg' width='100%'>
 
 ### VPN
-> <img src='https://github.com/cesarchs/REDES1_PROYECTO1/blob/main/IMG/TOPOLOGIA%203/vpn_topo3.jpeg' width='100%'>
+> <img src='https://github.com/cesarchs/REDES1_PROYECTO1/blob/main/IMG/TOPOLOGIA%203/vpn_topo3.jpeg' width='60%'>
