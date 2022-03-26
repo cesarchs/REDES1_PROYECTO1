@@ -7,7 +7,7 @@
 ### Escuela de Ciencias y Sistemas
 ### Redes de Computadoras 1
 
-<img src='https://user-images.githubusercontent.com/36779113/128587817-1a6c2fdc-d106-4dd3-b092-104c8299bded.png' background='white'>
+<img src='https://user-images.githubusercontent.com/36779113/128587817-1a6c2fdc-d106-4dd3-b092-104c8299bded.png' background='black'>
 
 > Integrantes
 > - Cesar Leonel Chamale Sican		  201700634
@@ -18,7 +18,6 @@
 ---
 # MANUAL DE CONFIGURACIÓN
 ## CONTENIDO
-
 * [Descripción de Problema](#descripción-de-problema)
   * [Red Física](#red-física)
   * [Red Virtualizada](#red-virtualizada)
