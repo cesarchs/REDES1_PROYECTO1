@@ -120,39 +120,39 @@ A continuacion puede observarse las configuraciones necesarias en cada uno de lo
 ---
 ## VPCs
 ### RRHH
-<img src='https://github.com/cesarchs/REDES1_PROYECTO1/blob/main/IMG/TOPOLOGIA%201/rrhh1_topo1.PNG' width='75%' >
+<img src='https://github.com/cesarchs/REDES1_PROYECTO1/blob/main/IMG/TOPOLOGIA%201/rrhh1_topo1.PNG' width='100%' >
 
-> <img src='https://github.com/cesarchs/REDES1_PROYECTO1/blob/main/IMG/TOPOLOGIA%201/rrhh2_topo1.PNG' width='75%' >
+> <img src='https://github.com/cesarchs/REDES1_PROYECTO1/blob/main/IMG/TOPOLOGIA%201/rrhh2_topo1.PNG' width='100%' >
 
 ### informatica
-<img src='https://github.com/cesarchs/REDES1_PROYECTO1/blob/main/IMG/TOPOLOGIA%201/informatica1_topo1.PNG' width='75%' >
+<img src='https://github.com/cesarchs/REDES1_PROYECTO1/blob/main/IMG/TOPOLOGIA%201/informatica1_topo1.PNG' width='100%' >
 
 ### contabilidad
-> <img src='https://github.com/cesarchs/REDES1_PROYECTO1/blob/main/IMG/TOPOLOGIA%201/conta1_topo1.PNG' width='75%' >
+> <img src='https://github.com/cesarchs/REDES1_PROYECTO1/blob/main/IMG/TOPOLOGIA%201/conta1_topo1.PNG' width='100%' >
 
-<img src='https://github.com/cesarchs/REDES1_PROYECTO1/blob/main/IMG/TOPOLOGIA%201/conta2_topo1.PNG' width='75%' >
+<img src='https://github.com/cesarchs/REDES1_PROYECTO1/blob/main/IMG/TOPOLOGIA%201/conta2_topo1.PNG' width='100%' >
 
 ### ventas
-<img src='https://github.com/cesarchs/REDES1_PROYECTO1/blob/main/IMG/TOPOLOGIA%201/ventas1_topo1.PNG' width='75%' >
+<img src='https://github.com/cesarchs/REDES1_PROYECTO1/blob/main/IMG/TOPOLOGIA%201/ventas1_topo1.PNG' width='100%' >
 
 ### switches
-> <img src='https://github.com/cesarchs/REDES1_PROYECTO1/blob/main/IMG/TOPOLOGIA%201/esw1_topo1.PNG' width='75%' >
+> <img src='https://github.com/cesarchs/REDES1_PROYECTO1/blob/main/IMG/TOPOLOGIA%201/esw1_topo1.PNG' width='100%' >
 
-<img src='https://github.com/cesarchs/REDES1_PROYECTO1/blob/main/IMG/TOPOLOGIA%201/esw2_topo1.PNG' width='75%' >
+<img src='https://github.com/cesarchs/REDES1_PROYECTO1/blob/main/IMG/TOPOLOGIA%201/esw2_topo1.PNG' width='100%' >
 
-> <img src='https://github.com/cesarchs/REDES1_PROYECTO1/blob/main/IMG/TOPOLOGIA%201/esw3_topo1.PNG' width='75%' >
+> <img src='https://github.com/cesarchs/REDES1_PROYECTO1/blob/main/IMG/TOPOLOGIA%201/esw3_topo1.PNG' width='100%' >
 
 
 ### TOPOLOGIA 2: Backbone
 La zona de cableado vertical será la encargada de conectar el área de trabajo con la zona
 de servidores, para esto se tiene nodos altamente redundantes cuya finalidad es brindar
 una conectividad el 100% del tiempo
-> <img src='images/topologia2.png' width='85%'>
+> <img src='https://github.com/cesarchs/REDES1_PROYECTO1/blob/main/IMG/TOPOLOGIA%202/topologia.JPG' width='100%'>
 
 #### Configuracion topologia 2
 
 * Debe agregarse las máquinas, tomando en cuenta que todas son vpc.
-* Configurar los puertos de los switch en modo access o modo troncal, según corresponda.
+* Configurar los puertos de los switch en modo access o modo troncal (dot1Q), según corresponda.
 * Crear las 4 VLAN únicamente en el ESW4 como lo muestra la [tabla 1.0]($tabla-1).
 * Configurar VTP con los siguientes datos:
   * Dominio: Grupo# (# - será el número de grupo asignado).
@@ -166,15 +166,19 @@ una conectividad el 100% del tiempo
     * Server:
       * ESW4
 * Configurar STP con los siguientes datos:
-  * ESW4 será el root bridge para la vlan 1,1X,2X,3X,4X.
+  * ESW4 será el root bridge para la vlan 1,10,20,30,40.
 * Configurar la nube 1, con el puerto 4002 de salida y 4001 de entrada. Configurar la nube 2, con el puerto 4003 de salida y 4004 de entrada.
 
 ---
+A continuacion puede observarse las configuraciones necesarias en cada uno de los dispositivos y switchs para la toplogia 2:
 
-> <img src='images/top2_1.jpeg' width='100%'>
-> <img src='images/top2_2.jpeg' width='100%'>
-> <img src='images/top2_3.jpeg' width='100%'>
-> <img src='images/top2_4.jpeg' width='100%'>
+### VPC
+> <img src='https://github.com/cesarchs/REDES1_PROYECTO1/blob/main/IMG/TOPOLOGIA%202/ip%20de%20informatica_2.JPG' width='100%'>
+
+### Switches
+> <img src='https://github.com/cesarchs/REDES1_PROYECTO1/blob/main/IMG/TOPOLOGIA%202/switch%20cliente%20VLAN%20y%20TRUNK.JPG' width='100%'>
+> <img src='https://github.com/cesarchs/REDES1_PROYECTO1/blob/main/IMG/TOPOLOGIA%202/switch%20cliente%20VTP.JPG' width='100%'>
+> <img src='https://github.com/cesarchs/REDES1_PROYECTO1/blob/main/IMG/TOPOLOGIA%202/switch%20server%20VTP.JPG' width='100%'>
 
 
 ### TOPOLOGIA 3: Zona de Servidores
