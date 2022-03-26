@@ -122,26 +122,37 @@ A continuacion puede observarse las configuraciones necesarias en cada uno de lo
 
 CONFIGURACION VPCS
  - RRHH
+
    ip 192.168.81.X0/24 192.168.81.1
    - RRHH_1
+
      ip 192.168.81.10/24 192.168.81.1
+
    - RRHH_2
+
      ip 192.168.81.20/24 192.168.81.1
 
  - INFORMATICA
+
    ip 192.168.82.X0/24 192.168.82.1
    - INFORMATICA_1
+
      ip 192.168.82.10/24 192.168.82.1
  - CONTABILIDAD
+
    ip 192.168.83.X0/24 192.168.83.1
    - CONTA_1
+
      ip 192.168.83.10/24 192.168.83.1
    - CONTA_2
+
      ip 192.168.83.20/24 192.168.83.1
 
  - VENTAS
+
    ip 192.168.84.X0/24 192.168.84.1
    - VENTAS_1
+   
      ip 192.168.84.10/24 192.168.84.1
 
 ## VPCs
