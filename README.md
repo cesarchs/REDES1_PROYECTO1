@@ -7,7 +7,7 @@
 ### Escuela de Ciencias y Sistemas
 ### Redes de Computadoras 1
 
-<img src='https://user-images.githubusercontent.com/36779113/128587817-1a6c2fdc-d106-4dd3-b092-104c8299bded.png' background='black'>
+<img src='https://user-images.githubusercontent.com/36779113/128587817-1a6c2fdc-d106-4dd3-b092-104c8299bded.png' background='white'>
 
 > Integrantes
 > - Cesar Leonel Chamale Sican		  201700634
@@ -21,7 +21,7 @@
 * [Descripción de Problema](#descripción-de-problema)
   * [Red Física](#red-física)
   * [Red Virtualizada](#red-virtualizada)
-  * [Requerimientos del Sistema](#requerimientos-del-sistema)
+* [Requerimientos del Sistema](#requerimientos-del-sistema)
     * [Instalacion Imagen de Switch](#instalacion-imagen-de-switch) 
 * [TOPOLOGIAS](#topologias)
   * [Tabla 1](#tabla-1) 
@@ -54,6 +54,7 @@ compartidos por defecto.
 Se deberá configurar y administrar los equipos de una infraestructura de red para una
 empresa la cual cuenta con un servidor web en cada departamento.
 
+---
 ## Requerimientos del Sistema
 Para usar hacer uso de este proyecto primero deberá cumplir con los siguientes requerimientos:
 
@@ -73,7 +74,7 @@ Para usar hacer uso de este proyecto primero deberá cumplir con los siguientes 
   
   -*Para finalizar se deben presionar los botones* `Apply` *y* `OK` *para que se guarden los cambios, luego en el área de dispositivos será visible el nuevo Switch.*
 
-
+---
 ## TOPOLOGIAS
 Se debe configurar la siguiente topología, tomando en cuenta estos parámetros iniciales y
 los que se detallan a continuación en cada sección de la topología.
@@ -84,12 +85,12 @@ departamento de la empresa. La X representa el número de grupo elegido.
 
 ### TABLA 1
 
-| Nombre        | No.VLAN | Direccion de Red | Primera Direccion Asignable | Ultimo Direccion Asignable | Direccion de Broadcast |
+| Nombre        | No.VLAN | Direccion de Red | Primera Direccion Asignable | Ultimo Direccion Asignable |Gateway |
 |---------------|---------|------------------|-----------------------------|----------------------------|------------------------|
-| RRHH          | 1X      | 192.168.X1.0/24  | 192.168.X1                  | 192.168.X1.254             | 192.168.X1.254         |
-| Informatica   | 2x      | 192.168.X2.0/24  | 192.168.X2                  | 192.168.X2.254             | 192.168.X2.254         |
-| Constabilidad | 3x      | 192.168.X3.0/24  | 192.168.X3                  | 192.168.X3.254             | 192.168.X3.255         |
-| Ventas        | 4x      | 192.168.X4.0/24  | 192.168.X4                  | 192.168.X4.254             | 192.168.X4.255         |
+| RRHH          | 10      | 192.168.X1.0/24  | 192.168.X1                  | 192.168.X1.254             | 192.168.X1.1         |
+| Informatica   | 20      | 192.168.X2.0/24  | 192.168.X2                  | 192.168.X2.254             | 192.168.X2.1         |
+| Constabilidad | 30      | 192.168.X3.0/24  | 192.168.X3                  | 192.168.X3.254             | 192.168.X3.1         |
+| Ventas        | 40      | 192.168.X4.0/24  | 192.168.X4                  | 192.168.X4.254             | 192.168.X4.1         |
 
 Nota: /24 es una notación de máscara subred, un término que se explicará en la siguiente
 fase. Tome en cuenta que esto es equivalente a 255.255.255.0.
