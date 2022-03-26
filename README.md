@@ -106,52 +106,42 @@ Se debe configurar los puertos de los switch en modo access o modo troncal, seg�
 * Configurar VTP con los siguientes datos:
   * Dominio: Grupo# (# - será el número de grupo asignado)
   * Contraseña: Grupo# (#-será el número de grupo asignado)
-  * Versión: Configurar la versión 2
   * Modos de configuración:
     * Cliente:
       * ESW1
       * ESW2
       * ESW3
-    * Server:
-      * 1. (-)
-    * Transparent:
-      * 1. (-)
+
 * Configurar la nube con el puerto 4001 de salida y 4002 de entrada.
-* 
-A continuacion puede observarse las configuraciones necesarias en cada uno de los dispositivos switch para la toplogia 1:
+
+
+A continuacion puede observarse las configuraciones necesarias en cada uno de los dispositivos y switchs para la toplogia 1:
 
 ---
-> <img src='images/top1_01.jpeg' width='75%' >
+## VPCs
+### RRHH
+<img src='https://github.com/cesarchs/REDES1_PROYECTO1/blob/main/IMG/TOPOLOGIA%201/rrhh1_topo1.PNG' width='75%' >
 
-<img src='images/top1_02.jpeg' width='75%' >
+> <img src='https://github.com/cesarchs/REDES1_PROYECTO1/blob/main/IMG/TOPOLOGIA%201/rrhh2_topo1.PNG' width='75%' >
 
-> <img src='images/top1_03.jpeg' width='75%' >
+### informatica
+<img src='https://github.com/cesarchs/REDES1_PROYECTO1/blob/main/IMG/TOPOLOGIA%201/informatica1_topo1.PNG' width='75%' >
 
-<img src='images/top1_04.jpeg' width='75%' >
+### contabilidad
+> <img src='https://github.com/cesarchs/REDES1_PROYECTO1/blob/main/IMG/TOPOLOGIA%201/conta1_topo1.PNG' width='75%' >
 
-> <img src='images/top1_05.jpeg' width='75%' >
+<img src='https://github.com/cesarchs/REDES1_PROYECTO1/blob/main/IMG/TOPOLOGIA%201/conta2_topo1.PNG' width='75%' >
 
-<img src='images/top1_06.jpeg' width='75%' >
+### ventas
+<img src='https://github.com/cesarchs/REDES1_PROYECTO1/blob/main/IMG/TOPOLOGIA%201/ventas1_topo1.PNG' width='75%' >
 
-<img src='images/top1_07.jpeg' width='75%' >
+### switches
+> <img src='https://github.com/cesarchs/REDES1_PROYECTO1/blob/main/IMG/TOPOLOGIA%201/esw1_topo1.PNG' width='75%' >
 
-> <img src='images/top1_08.jpeg' width='75%' >
+<img src='https://github.com/cesarchs/REDES1_PROYECTO1/blob/main/IMG/TOPOLOGIA%201/esw2_topo1.PNG' width='75%' >
 
-<img src='images/top1_09.jpeg' width='75%' >
+> <img src='https://github.com/cesarchs/REDES1_PROYECTO1/blob/main/IMG/TOPOLOGIA%201/esw3_topo1.PNG' width='75%' >
 
-> <img src='images/top1_10.jpeg' width='75%' >
-
-<img src='images/top1_11.jpeg' width='75%' >
-
-> <img src='images/top1_12.jpeg' width='75%' >
-
-<img src='images/top1_13.jpeg' width='75%' >
-
-> <img src='images/top1_14.jpeg' width='75%' >
-
-<img src='images/top1_15.jpeg' width='75%' >
-
-> <img src='images/top1_16.jpeg' width='75%' >
 
 ### TOPOLOGIA 2: Backbone
 La zona de cableado vertical será la encargada de conectar el área de trabajo con la zona
