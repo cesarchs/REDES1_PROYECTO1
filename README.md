@@ -78,7 +78,7 @@ Para usar hacer uso de este proyecto primero deberá cumplir con los siguientes 
 ## TOPOLOGIAS
 Se debe configurar la siguiente topología, tomando en cuenta estos parámetros iniciales y
 los que se detallan a continuación en cada sección de la topología.
-> <img src='images/red_completa.png'>
+> <img src='https://github.com/cesarchs/REDES1_PROYECTO1/blob/main/IMG/topoCompleta.JPG'>
 
 Tabla de distribución de direcciones ip correspondientes a cada
 departamento de la empresa. La X representa el número de grupo elegido.
