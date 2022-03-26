@@ -183,8 +183,7 @@ A continuacion puede observarse las configuraciones necesarias en cada uno de lo
 
 ### TOPOLOGIA 3: Zona de Servidores
 Lugar donde se almacenan los servidores web de la empresa. Se requiere que los mismos
-estén siempre activos, debido a esto la topología se vuelve extremadamente pesada. Por lo
-que se usará un nodo maestro-esclavo para equilibrar la carga del mismo.
+estén siempre activos, debido a esto la topología se vuelve extremadamente pesada. Por lo que se usará un nodo maestro-esclavo para equilibrar la carga del mismo.
 > <img src='images/toplogia3.png' width='85%'>
 
 #### Maestro
@@ -212,16 +211,4 @@ Un equipo que servirá como host para sobrellevar la carga del maestro.
       * 1. (-)
     * Transparent:
       * 1. (-)
-
-
-## Envío de paquetes
-### Topología 1
-
-
-
-### Topologia 2
-
-![image](https://user-images.githubusercontent.com/36779113/134792759-3d628427-0b56-41ff-b92b-7e4db9af307f.png)
-
-### Topología 3
 
